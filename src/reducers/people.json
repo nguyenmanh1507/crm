@@ -1,0 +1,236 @@
+[
+  {
+    "_id": "56ef4aa1104bacae16dbddb2",
+    "index": 0,
+    "picture": "https://unsplash.it/32",
+    "age": 35,
+    "eyeColor": "brown",
+    "name": "Vargas Obrien",
+    "gender": "male",
+    "email": "vargasobrien@namegen.com",
+    "phone": "+1 (876) 465-3480",
+    "address": "762 Vanderveer Street, Bodega, Puerto Rico, 3874",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Armstrong Christian"
+      },
+      {
+        "id": 1,
+        "name": "Chan Stevens"
+      },
+      {
+        "id": 2,
+        "name": "Mckay Morin"
+      }
+    ]
+  },
+  {
+    "_id": "56ef4aa1012f00eb859a70a3",
+    "index": 1,
+    "picture": "https://unsplash.it/32",
+    "age": 25,
+    "eyeColor": "blue",
+    "name": "Judith Malone",
+    "gender": "female",
+    "email": "judithmalone@namegen.com",
+    "phone": "+1 (871) 492-2307",
+    "address": "719 Louis Place, Nadine, Utah, 2380",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Erika Reeves"
+      },
+      {
+        "id": 1,
+        "name": "Janette Howell"
+      },
+      {
+        "id": 2,
+        "name": "Lorraine Williams"
+      }
+    ]
+  },
+  {
+    "_id": "56ef4aa195ea6f3665e93ea9",
+    "index": 2,
+    "picture": "https://unsplash.it/32",
+    "age": 25,
+    "eyeColor": "brown",
+    "name": "Edna Washington",
+    "gender": "female",
+    "email": "ednawashington@namegen.com",
+    "phone": "+1 (847) 585-3752",
+    "address": "642 Bogart Street, Dalton, Northern Mariana Islands, 4469",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Sue Rosa"
+      },
+      {
+        "id": 1,
+        "name": "Lynn Church"
+      },
+      {
+        "id": 2,
+        "name": "Essie Thomas"
+      }
+    ]
+  },
+  {
+    "_id": "56ef4aa1136b60b6ca736edd",
+    "index": 3,
+    "picture": "https://unsplash.it/32",
+    "age": 28,
+    "eyeColor": "brown",
+    "name": "Nicholson Leach",
+    "gender": "male",
+    "email": "nicholsonleach@namegen.com",
+    "phone": "+1 (867) 427-3344",
+    "address": "168 Crooke Avenue, Eden, Florida, 7946",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Deloris Perkins"
+      },
+      {
+        "id": 1,
+        "name": "Church Farley"
+      },
+      {
+        "id": 2,
+        "name": "Merrill Hess"
+      }
+    ]
+  },
+  {
+    "_id": "56ef4aa11ecd81c49f608396",
+    "index": 4,
+    "picture": "https://unsplash.it/32",
+    "age": 33,
+    "eyeColor": "brown",
+    "name": "Gamble Oconnor",
+    "gender": "male",
+    "email": "gambleoconnor@namegen.com",
+    "phone": "+1 (910) 480-2904",
+    "address": "598 Broome Street, Blanford, Louisiana, 1937",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Collier Allison"
+      },
+      {
+        "id": 1,
+        "name": "Rollins Chan"
+      },
+      {
+        "id": 2,
+        "name": "Tonya Foley"
+      }
+    ]
+  },
+  {
+    "_id": "56ef4aa150b038789005f1ae",
+    "index": 5,
+    "picture": "https://unsplash.it/32",
+    "age": 32,
+    "eyeColor": "brown",
+    "name": "Munoz Williamson",
+    "gender": "male",
+    "email": "munozwilliamson@namegen.com",
+    "phone": "+1 (832) 572-3282",
+    "address": "843 Wogan Terrace, Walland, Wyoming, 7522",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Mckenzie Alvarado"
+      },
+      {
+        "id": 1,
+        "name": "Dixie Knapp"
+      },
+      {
+        "id": 2,
+        "name": "West Waller"
+      }
+    ]
+  },
+  {
+    "_id": "56ef4aa1dcc1bfb7256a9353",
+    "index": 6,
+    "picture": "https://unsplash.it/32",
+    "age": 20,
+    "eyeColor": "blue",
+    "name": "Cortez Gomez",
+    "gender": "male",
+    "email": "cortezgomez@namegen.com",
+    "phone": "+1 (816) 519-3949",
+    "address": "749 Keen Court, Mammoth, Tennessee, 1653",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Dana Price"
+      },
+      {
+        "id": 1,
+        "name": "Hunter Mcclain"
+      },
+      {
+        "id": 2,
+        "name": "Harmon Macias"
+      }
+    ]
+  },
+  {
+    "_id": "56ef4aa18b0e55123138119c",
+    "index": 7,
+    "picture": "https://unsplash.it/32",
+    "age": 20,
+    "eyeColor": "green",
+    "name": "Molina Burks",
+    "gender": "male",
+    "email": "molinaburks@namegen.com",
+    "phone": "+1 (874) 482-2807",
+    "address": "512 Newkirk Avenue, Ribera, Maryland, 6287",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Rosalind Kerr"
+      },
+      {
+        "id": 1,
+        "name": "Murphy Marks"
+      },
+      {
+        "id": 2,
+        "name": "Brooks Hurst"
+      }
+    ]
+  },
+  {
+    "_id": "56ef4aa1117ffa5e450148e3",
+    "index": 8,
+    "picture": "https://unsplash.it/32",
+    "age": 28,
+    "eyeColor": "brown",
+    "name": "Everett Hyde",
+    "gender": "male",
+    "email": "everetthyde@namegen.com",
+    "phone": "+1 (866) 490-2128",
+    "address": "645 Neptune Court, Zarephath, California, 3383",
+    "friends": [
+      {
+        "id": 0,
+        "name": "Gallegos Mcmahon"
+      },
+      {
+        "id": 1,
+        "name": "Mendoza Goff"
+      },
+      {
+        "id": 2,
+        "name": "Maryann Miranda"
+      }
+    ]
+  }
+]
