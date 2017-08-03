@@ -2,29 +2,42 @@ import React, { Component } from 'react'
 import {
   StyleSheet,
   View,
-  Text
+  Text,
+  ScrollView
 } from 'react-native'
 import Icon from 'react-native-vector-icons/EvilIcons'
+import {
+  MKTextField,
+  MKColor,
+  MKButton
+} from 'react-native-material-kit'
+import { connect } from 'react-redux'
+
+import * as actions from 'src/actions'
 
 const styles = StyleSheet.create({
-  container: {
+  form: {
     flex: 1,
-    flexWrap: 'wrap',
-    paddingTop: 20,
-    backgroundColor: '#e5e5e5'
+    paddingTop: 50,
+    paddingBottom: 10,
+    paddingLeft: 20,
+    paddingRight: 20,
+    justifyContent: 'center'
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    textAlignVertical: 'center',
-    margin: 10
+  fieldStyles: {
+    height: 40,
+    color: MKColor.Orange
   },
-  icons: {
-    paddingBottom: 2
+  addButton: {
+    marginTop: 20
   }
 })
 
-export default class AddPerson extends Component {
+const AddButton = MKButton.coloredButton()
+  .withText('Add')
+  .build()
+
+class AddPerson extends Component {
   static navigationOptions = {
     tabBarLabel: 'Add person',
     tabBarIcon: ({ tintColor }) => (
@@ -36,11 +49,74 @@ export default class AddPerson extends Component {
     )
   }
 
+  createNewContact = () => {
+    const {
+      name,
+      phone,
+      email,
+      address
+    } = this.props
+
+    this.props.createNewContact({ name, phone, email, address })
+    this.props.navigation.navigate('PeopleList')
+  }
+
   render () {
     return (
-      <View style={styles.container}>
-        <Text>Add person</Text>
-      </View>
+      <ScrollView>
+        <View style={styles.form}>
+          <Text>Add a new contact</Text>
+          <MKTextField
+            textInputStyle={styles.fieldStyles}
+            placeholder='Name'
+            tintColor={MKColor.Teal}
+            value={this.props.name}
+            onChangeText={value => this.props.formUpdate({ prop: 'name', value })}
+          />
+          <MKTextField
+            textInputStyle={styles.fieldStyles}
+            placeholder='Phone'
+            tintColor={MKColor.Teal}
+            value={this.props.phone}
+            onChangeText={value => this.props.formUpdate({ prop: 'phone', value })}
+          />
+          <MKTextField
+            textInputStyle={styles.fieldStyles}
+            placeholder='Email'
+            tintColor={MKColor.Teal}
+            value={this.props.email}
+            onChangeText={value => this.props.formUpdate({ prop: 'email', value })}
+          />
+          <MKTextField
+            textInputStyle={styles.fieldStyles}
+            placeholder='Address'
+            tintColor={MKColor.Teal}
+            value={this.props.address}
+            onChangeText={value => this.props.formUpdate({ prop: 'address', value })}
+
+          />
+          <View style={styles.addButton}>
+            <AddButton onPress={this.createNewContact} />
+          </View>
+        </View>
+      </ScrollView>
     )
   }
 }
+
+const mapStateToProps = state => ({
+  name: state.name,
+  phone: state.phone,
+  email: state.email,
+  address: state.address,
+})
+
+const mapDispatchToProps = dispatch => ({
+  createNewContact: ({ name, phone, email, address }) => dispatch(actions.createNewContact({ name, phone, email, address })),
+  formUpdate: ({ prop, value }) => dispatch(actions.formUpdate({ prop, value }))
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AddPerson)

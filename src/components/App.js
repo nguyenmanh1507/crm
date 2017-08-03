@@ -2,7 +2,8 @@ import React, { Component } from 'react'
 import { View } from 'react-native'
 import firebase from 'firebase'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, applyMiddleware } from 'redux'
+import Thunk from 'redux-thunk'
 
 import Login from './Login'
 import Loader from './Loader'
@@ -11,7 +12,8 @@ import reducers from '../reducers/PeopleReducer'
 
 const store = createStore(
   reducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(Thunk)
 )
 
 export default class CRM extends Component {

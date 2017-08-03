@@ -6,9 +6,11 @@ import {
 } from 'react-native'
 import { connect } from 'react-redux'
 import Icon from 'react-native-vector-icons/EvilIcons'
+import { map } from 'lodash'
 
 import PeopleItem from './PeopleItem'
 import PeopleDetail from './PeopleDetail'
+import { loadInitialContacts } from 'src/actions'
 
 const styles = StyleSheet.create({
   container: {
@@ -29,6 +31,7 @@ class PeopleList extends Component {
   }
 
   componentWillMount () {
+    this.props.loadInitialContacts()
   }
 
   renderInitialView = () => {
@@ -62,10 +65,15 @@ class PeopleList extends Component {
 }
 
 const mapStateToProps = state => ({
-  people: state.people,
+  people: map(state.people, (val, uid) => ({ ...val, uid })),
   detailView: state.detailView
 })
 
+const mapDispatchToProps = dispatch => ({
+  loadInitialContacts: () => dispatch(loadInitialContacts())
+})
+
 export default connect(
-  mapStateToProps
+  mapStateToProps,
+  mapDispatchToProps
 )(PeopleList)
